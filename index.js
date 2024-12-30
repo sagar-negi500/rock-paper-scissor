@@ -3,6 +3,8 @@ let msgcon= document.querySelector(".msg-con")
 let user1= document.querySelector(".user")
 let comp1= document.querySelector(".comp")
 let msg= document.querySelector(".msg")
+let msg_user= document.querySelector(".msg-user")
+let msg_com= document.querySelector(".msg-com")
 // let choices= document.getAttribute(".choices")
 
 user1=0;
@@ -18,7 +20,7 @@ const comp =()=>{
 const show_winner=(winner,user,computer)=>{
     if(winner){
         user1++;
-        msg.innerHTML=user1;
+        msg_user.innerHTML=user1;
         console.log(" you are the winner")
         msgcon.innerHTML=`you win ${user } beats ${computer}`;
         msgcon.style.backgroundColor = "green";
@@ -26,7 +28,7 @@ const show_winner=(winner,user,computer)=>{
     }
     else{
         comp1++;
-        msg.innerHTML=comp1;
+        msg_com.innerHTML=comp1;
         console.log("you lose");
          msgcon.innerHTML=`you lose ${computer } beats ${user}`;
          msgcon.style.backgroundColor = "red";
